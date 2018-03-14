@@ -6,7 +6,7 @@
 #    By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/03/14 01:36:40 by ythollet     #+#   ##    ##    #+#        #
-#    Updated: 2018/03/14 01:36:40 by ythollet    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/03/14 23:28:04 by ythollet    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -28,7 +28,7 @@ DIR_STR =	String/
 
 CHR = 	ft_isascii.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_islower.c \
 		ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c \
-		ft_size_wchar.c
+		ft_size_wchar.c ft_nbrchar.c
 
 GNL =	get_next_line.c
 
