@@ -13,7 +13,7 @@
 
 #include "../Includes/ft_printf.h"
 
-void		ft_cast_diu(t_prints *print, t_fields *fields)
+void		ft_cast_diu(pf_print *print, pf_fields *fields)
 {
 	intmax_t digit;
 
@@ -32,7 +32,7 @@ void		ft_cast_diu(t_prints *print, t_fields *fields)
 	print->data = (void *)digit;
 }
 
-int			ft_len(t_prints *print, t_fields *fields)
+int			ft_len(pf_print *print, pf_fields *fields)
 {
 	int len;
 
@@ -45,7 +45,7 @@ int			ft_len(t_prints *print, t_fields *fields)
 	return (len);
 }
 
-t_prints	ft_cvt_diu(t_prints *print, t_fields *fields)
+pf_print	pf_cvt_diu(pf_print *print, pf_fields *fields)
 {
 	int cal;
 

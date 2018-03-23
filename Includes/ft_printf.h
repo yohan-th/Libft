@@ -23,7 +23,7 @@
 # define PRINTF_SIZE "hljz"
 # define PRINTF_NUMBERS "0123456789"
 
-typedef struct	s_fields
+typedef struct	pfs_fields
 {
 	BOOL	diese;
 	BOOL	zero;
@@ -35,9 +35,9 @@ typedef struct	s_fields
 	int		width;
 	int		precision;
 	char	type;
-}				t_fields;
+}				pf_fields;
 
-typedef struct	s_prints
+typedef struct	pfs_prints
 {
 	void		*data;
 	int			space_bfr;
@@ -50,16 +50,16 @@ typedef struct	s_prints
 	int			zero_x;
 	int			zero_x_up;
 	int			free;
-}				t_prints;
+}				pf_print;
 
 int				ft_printf(const char *format, ...);
-t_fields		ft_fields_reset(void);
-t_fields		ft_parse(const char **format);
-intmax_t		ft_type(va_list ap, t_fields *fields);
-t_prints		ft_convert(intmax_t *data, t_fields *fields);
-int				ft_print_field(t_prints *data_prt, t_fields *fields);
-t_prints		ft_print_reset(void);
-void			ft_parse_flags(t_fields *fields, const char **format);
+pf_fields		pf_fields_reset(void);
+pf_fields		pf_parse(const char **format);
+intmax_t		pf_type(va_list ap, pf_fields *fields);
+pf_print		pf_convert(intmax_t *data, pf_fields *fields);
+int				pf_print_field(pf_print *data_prt, pf_fields *fields);
+pf_print		pf_print_reset(void);
+void			pf_parse_flags(pf_fields *fields, const char **format);
 
 /*
 **┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -67,10 +67,10 @@ void			ft_parse_flags(t_fields *fields, const char **format);
 **┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 */
 
-t_prints		ft_cvt_s(t_prints *data_prt, t_fields *fields);
-t_prints		ft_cvt_c(t_prints *data_prt, t_fields *fields);
-t_prints		ft_cvt_diu(t_prints *print, t_fields *fields);
-t_prints		ft_cvt_xp(t_prints *data_prt, t_fields *fields);
-t_prints		ft_cvt_o(t_prints *data_prt, t_fields *fields);
+pf_print		pf_cvt_s(pf_print *data_prt, pf_fields *fields);
+pf_print		pf_cvt_c(pf_print *data_prt, pf_fields *fields);
+pf_print		pf_cvt_diu(pf_print *print, pf_fields *fields);
+pf_print		pf_cvt_xp(pf_print *data_prt, pf_fields *fields);
+pf_print		pf_cvt_o(pf_print *data_prt, pf_fields *fields);
 
 #endif

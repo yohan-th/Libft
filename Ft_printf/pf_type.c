@@ -56,7 +56,7 @@ intmax_t	ft_type_int(va_list ap, char type)
 	return (data);
 }
 
-intmax_t	ft_type(va_list ap, t_fields *fields)
+intmax_t	pf_type(va_list ap, pf_fields *fields)
 {
 	intmax_t data;
 

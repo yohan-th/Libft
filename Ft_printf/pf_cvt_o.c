@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_cvt_oO.c                                      .::    .:/ .      .::   */
+/*   pf_cvt_oO.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
@@ -13,7 +13,7 @@
 
 #include "../Includes/ft_printf.h"
 
-void		ft_cast_o(t_prints *print, t_fields *fields)
+void		ft_cast_o(pf_print *print, pf_fields *fields)
 {
 	if (fields->size == 'h' && fields->type == 'o')
 		print->data = (void *)ft_utoa((unsigned short int)print->data, 8);
@@ -27,7 +27,7 @@ void		ft_cast_o(t_prints *print, t_fields *fields)
 		print->data = (void *)ft_utoa((intmax_t)print->data, 8);
 }
 
-t_prints	ft_cvt_o(t_prints *print, t_fields *fields)
+pf_print	pf_cvt_o(pf_print *print, pf_fields *fields)
 {
 	int		calc;
 

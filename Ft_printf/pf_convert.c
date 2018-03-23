@@ -13,21 +13,21 @@
 
 #include "../Includes/ft_printf.h"
 
-t_prints	ft_convert(intmax_t *data, t_fields *fields)
+pf_print	pf_convert(intmax_t *data, pf_fields *fields)
 {
-	t_prints print;
+	pf_print print;
 
-	print = ft_print_reset();
+	print = pf_print_reset();
 	print.data = (void *)*data;
 	if (ft_strchr("sS", fields->type))
-		print = ft_cvt_s(&print, fields);
+		print = pf_cvt_s(&print, fields);
 	else if (ft_strchr("cC%", fields->type))
-		print = ft_cvt_c(&print, fields);
+		print = pf_cvt_c(&print, fields);
 	else if (ft_strchr("dDiuU", fields->type))
-		print = ft_cvt_diu(&print, fields);
+		print = pf_cvt_diu(&print, fields);
 	else if (ft_strchr("xXp", fields->type))
-		print = ft_cvt_xp(&print, fields);
+		print = pf_cvt_xp(&print, fields);
 	else if (ft_strchr("oO", fields->type))
-		print = ft_cvt_o(&print, fields);
+		print = pf_cvt_o(&print, fields);
 	return (print);
 }

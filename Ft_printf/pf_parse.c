@@ -13,7 +13,7 @@
 
 #include "../Includes/ft_printf.h"
 
-void		ft_parse_flags(t_fields *fields, const char **format)
+void		pf_parse_flags(pf_fields *fields, const char **format)
 {
 	int i;
 
@@ -35,7 +35,7 @@ void		ft_parse_flags(t_fields *fields, const char **format)
 	*format += i;
 }
 
-void		ft_parse_precision(t_fields *fields, const char **format)
+void		ft_parse_precision(pf_fields *fields, const char **format)
 {
 	int		i;
 	char	*tmp;
@@ -57,7 +57,7 @@ void		ft_parse_precision(t_fields *fields, const char **format)
 	*format += i;
 }
 
-void		ft_parse_size(t_fields *fields, const char **format)
+void		ft_parse_size(pf_fields *fields, const char **format)
 {
 	int i;
 
@@ -83,7 +83,7 @@ void		ft_parse_size(t_fields *fields, const char **format)
 	*format += i;
 }
 
-void		ft_parse_correct(t_fields *fields, char type, const char *str)
+void		ft_parse_correct(pf_fields *fields, char type, const char *str)
 {
 	while (*str != type)
 	{
@@ -107,14 +107,14 @@ void		ft_parse_correct(t_fields *fields, char type, const char *str)
 		fields->type = 'S';
 }
 
-t_fields	ft_parse(const char **format)
+pf_fields	pf_parse(const char **format)
 {
-	t_fields	fields;
+	pf_fields	fields;
 	const char	*str;
 
 	str = *format;
-	fields = ft_fields_reset();
-	ft_parse_flags(&fields, format);
+	fields = pf_fields_reset();
+	pf_parse_flags(&fields, format);
 	fields.width = ft_strnbr(*format);
 	if (fields.width)
 		(*format) += ft_lenint(fields.width);

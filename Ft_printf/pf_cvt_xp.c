@@ -13,7 +13,7 @@
 
 #include "../Includes/ft_printf.h"
 
-void		ft_size_x(t_prints *print, t_fields *fields)
+void		ft_size_x(pf_print *print, pf_fields *fields)
 {
 	int calc;
 
@@ -30,7 +30,7 @@ void		ft_size_x(t_prints *print, t_fields *fields)
 		print->data = (void *)ft_strsub((char *)print->data, calc - 2, 2);
 }
 
-t_prints	ft_cvt_x_upr(t_prints *print, t_fields *fields)
+pf_print	ft_cvt_x_upr(pf_print *print, pf_fields *fields)
 {
 	int		calc;
 
@@ -59,7 +59,7 @@ t_prints	ft_cvt_x_upr(t_prints *print, t_fields *fields)
 	return (*print);
 }
 
-t_prints	ft_cvt_x_lwr(t_prints *print, t_fields *fields)
+pf_print	ft_cvt_x_lwr(pf_print *print, pf_fields *fields)
 {
 	char *str;
 
@@ -79,14 +79,14 @@ t_prints	ft_cvt_x_lwr(t_prints *print, t_fields *fields)
 	return (*print);
 }
 
-t_prints	ft_cvt_p(t_prints *print, t_fields *fields)
+pf_print	ft_cvt_p(pf_print *print, pf_fields *fields)
 {
 	fields->diese = 1;
 	*print = ft_cvt_x_lwr(print, fields);
 	return (*print);
 }
 
-t_prints	ft_cvt_xp(t_prints *print, t_fields *fields)
+pf_print	pf_cvt_xp(pf_print *print, pf_fields *fields)
 {
 	if (fields->type == 'x')
 		return (ft_cvt_x_lwr(print, fields));

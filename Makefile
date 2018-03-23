@@ -47,8 +47,8 @@ STR =	ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c \
 		ft_strclr.c ft_strdel.c ft_strlcat.c ft_strnbr.c ft_strcat_free.c \
 		ft_strncpy.c ft_strsplit.c ft_strtrim.c ft_wstrlen.c ft_wstrdup.c
 
-PRTF =	ft_printf.c ft_parse.c ft_type.c ft_convert.c ft_print_field.c \
-		ft_struct.c ft_cvt_c.c ft_cvt_s.c ft_cvt_o.c ft_cvt_diu.c ft_cvt_xp.c
+PRTF =	ft_printf.c pf_parse.c pf_type.c pf_convert.c pf_print_field.c \
+		pf_struct.c pf_cvt_c.c pf_cvt_s.c pf_cvt_o.c pf_cvt_diu.c pf_cvt_xp.c
 
 MATH =	ft_atoi.c ft_itoa.c ft_lenint.c ft_lenint_base.c ft_sqrt.c ft_utoa.c \
 		ft_digitlen.c

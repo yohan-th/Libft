@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_print_field.c                                 .::    .:/ .      .::   */
+/*   pf_print_field.c                                 .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
@@ -13,7 +13,7 @@
 
 #include "../Includes/ft_printf.h"
 
-int		ft_print_flags_bfr(t_prints *print)
+int		ft_print_flags_bfr(pf_print *print)
 {
 	int len_print;
 
@@ -39,7 +39,7 @@ int		ft_print_flags_bfr(t_prints *print)
 	return (len_print);
 }
 
-int		ft_print_flags_aftr(t_prints *print)
+int		ft_print_flags_aftr(pf_print *print)
 {
 	int len_print;
 
@@ -57,7 +57,7 @@ int		ft_print_flags_aftr(t_prints *print)
 	return (len_print);
 }
 
-int		ft_print_txt(t_prints *print, char c, int len_print)
+int		ft_print_txt(pf_print *print, char c, int len_print)
 {
 	len_print += ft_print_flags_bfr(print);
 	if (c == 'c' || c == '%')
@@ -72,7 +72,7 @@ int		ft_print_txt(t_prints *print, char c, int len_print)
 	return (len_print);
 }
 
-int		ft_print_int(t_prints *print, t_fields *fields, int len_print)
+int		ft_print_int(pf_print *print, pf_fields *fields, int len_print)
 {
 	len_print += ft_print_flags_bfr(print);
 	if (ft_strchr("dDi", fields->type) &&
@@ -87,7 +87,7 @@ int		ft_print_int(t_prints *print, t_fields *fields, int len_print)
 	return (len_print);
 }
 
-int		ft_print_field(t_prints *print, t_fields *fields)
+int		pf_print_field(pf_print *print, pf_fields *fields)
 {
 	int len_print;
 

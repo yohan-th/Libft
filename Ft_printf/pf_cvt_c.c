@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_cvt_c.c                                       .::    .:/ .      .::   */
+/*   pf_cvt_c.c                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
@@ -13,7 +13,7 @@
 
 #include "../Includes/ft_printf.h"
 
-t_prints	*ft_flags_c(t_prints *print, t_fields *fields)
+pf_print	*ft_flags_c(pf_print *print, pf_fields *fields)
 {
 	if (!(fields->moins))
 	{
@@ -32,7 +32,7 @@ t_prints	*ft_flags_c(t_prints *print, t_fields *fields)
 	return (print);
 }
 
-t_prints	ft_cvt_c(t_prints *print, t_fields *fields)
+pf_print	pf_cvt_c(pf_print *print, pf_fields *fields)
 {
 	wchar_t *c;
 

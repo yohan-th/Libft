@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_fields.c                                      .::    .:/ .      .::   */
+/*   fpf_fields.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
@@ -13,9 +13,9 @@
 
 #include "../Includes/ft_printf.h"
 
-t_fields	ft_fields_reset(void)
+pf_fields	pf_fields_reset(void)
 {
-	t_fields fields;
+	pf_fields fields;
 
 	fields.diese = 0;
 	fields.zero = 0;
@@ -30,9 +30,9 @@ t_fields	ft_fields_reset(void)
 	return (fields);
 }
 
-t_prints	ft_print_reset(void)
+pf_print	pf_print_reset(void)
 {
-	t_prints print;
+	pf_print print;
 
 	print.data = 0;
 	print.space_bfr = 0;

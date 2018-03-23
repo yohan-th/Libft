@@ -15,14 +15,14 @@
 
 int		ft_undef_char(const char **format)
 {
-	t_fields	fields;
+	pf_fields	fields;
 	intmax_t	data;
-	t_prints	print;
+	pf_print	print;
 	int			len_print;
 
 	(*format)++;
-	fields = ft_fields_reset();
-	ft_parse_flags(&fields, format);
+	fields = pf_fields_reset();
+	pf_parse_flags(&fields, format);
 	fields.width = ft_strnbr(*format);
 	if (fields.width)
 		(*format) += ft_lenint(fields.width);
@@ -35,8 +35,8 @@ int		ft_undef_char(const char **format)
 	data = (intmax_t)**format;
 	(*format)++;
 	fields.type = 'c';
-	print = ft_convert(&data, &fields);
-	len_print = ft_print_field(&print, &fields);
+	print = pf_convert(&data, &fields);
+	len_print = pf_print_field(&print, &fields);
 	return (len_print);
 }
 
@@ -68,9 +68,9 @@ int		ft_undef_beha(const char **format)
 int		ft_printf(const char *format, ...)
 {
 	va_list		ap;
-	t_fields	fields;
+	pf_fields	fields;
 	intmax_t	data;
-	t_prints	print;
+	pf_print	print;
 	int			len_print;
 
 	va_start(ap, format);
@@ -80,10 +80,10 @@ int		ft_printf(const char *format, ...)
 		if (*format == '%' && ft_undef_beha(&format) == 0)
 		{
 			format++;
-			fields = ft_parse(&format);
-			data = ft_type(ap, &fields);
-			print = ft_convert(&data, &fields);
-			len_print += ft_print_field(&print, &fields);
+			fields = pf_parse(&format);
+			data = pf_type(ap, &fields);
+			print = pf_convert(&data, &fields);
+			len_print += pf_print_field(&print, &fields);
 		}
 		else if (*format == '%' && ft_undef_beha(&format) == -1)
 			len_print += ft_undef_char(&format);

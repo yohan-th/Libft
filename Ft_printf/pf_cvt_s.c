@@ -13,7 +13,7 @@
 
 #include "../Includes/ft_printf.h"
 
-int			ft_strlen_s(t_prints *print, t_fields *fields)
+int			ft_strlen_s(pf_print *print, pf_fields *fields)
 {
 	if (fields->type == 's')
 		return (ft_strlen((char *)print->data));
@@ -21,7 +21,7 @@ int			ft_strlen_s(t_prints *print, t_fields *fields)
 		return (ft_wstrlen((wchar_t *)print->data));
 }
 
-t_prints	*ft_flags_s(t_prints *print, t_fields *fields)
+pf_print	*ft_flags_s(pf_print *print, pf_fields *fields)
 {
 	if (fields->width > ft_strlen_s(print, fields) && !(fields->moins))
 	{
@@ -40,7 +40,7 @@ t_prints	*ft_flags_s(t_prints *print, t_fields *fields)
 	return (print);
 }
 
-t_prints	ft_cvt_s_lwr(t_prints *print, t_fields *fields)
+pf_print	ft_cvt_s_lwr(pf_print *print, pf_fields *fields)
 {
 	char *str;
 
@@ -61,7 +61,7 @@ t_prints	ft_cvt_s_lwr(t_prints *print, t_fields *fields)
 	return (*print);
 }
 
-t_prints	ft_cvt_s_upr(t_prints *print, t_fields *fields)
+pf_print	ft_cvt_s_upr(pf_print *print, pf_fields *fields)
 {
 	wchar_t *str;
 
@@ -82,7 +82,7 @@ t_prints	ft_cvt_s_upr(t_prints *print, t_fields *fields)
 	return (*print);
 }
 
-t_prints	ft_cvt_s(t_prints *print, t_fields *fields)
+pf_print	pf_cvt_s(pf_print *print, pf_fields *fields)
 {
 	if (fields->type == 's' && !ft_strchr("lL", fields->size))
 		return (ft_cvt_s_lwr(print, fields));
