@@ -51,6 +51,7 @@ wchar_t		*ft_wstrncpy(wchar_t *dst, const wchar_t *src, size_t len);
 wchar_t		*ft_wstrnew(size_t size);
 wchar_t		*ft_wstrsub(wchar_t const *s, unsigned int start, size_t len);
 wchar_t		*ft_wstrsub_free(wchar_t *s, unsigned int start, size_t len);
+char		*ft_strjoin_mltp(int n, ...);
 
 int			ft_strnbr(const char *str);
 

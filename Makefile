@@ -42,7 +42,7 @@ PUT =	ft_putchar.c ft_putchar_fd.c ft_putnbr_signed.c ft_putnbr_unsigned.c \
 
 STR =	ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c \
 		ft_strncat.c ft_strnequ.c ft_strstr.c ft_wstrncpy.c\
-		ft_strchr.c ft_strcpy.c ft_strjoin.c ft_wstrcpy.c \
+		ft_strchr.c ft_strcpy.c ft_strjoin.c ft_wstrcpy.c ft_strjoin_mltp.c \
 		ft_strncmp.c ft_strnew.c ft_strrev.c ft_strsub.c ft_wstrsub.c \
 		ft_strclr.c ft_strdel.c ft_strlcat.c ft_strnbr.c ft_strcat_free.c \
 		ft_strncpy.c ft_strsplit.c ft_strtrim.c ft_wstrlen.c ft_wstrdup.c
