@@ -24,5 +24,6 @@ int		ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
 int		ft_putwchar(wchar_t c);
 int		ft_putwstr(wchar_t const *s);
+int		ft_putchar_dup(char c, int i);
 
 #endif
