@@ -26,7 +26,6 @@
 # include <stdio.h>
 
 # include "char.h"
-# include "ft_printf.h"
 # include "get_next_line.h"
 # include "list.h"
 # include "maths.h"
