@@ -6,7 +6,7 @@
 #    By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/03/14 01:36:40 by ythollet     #+#   ##    ##    #+#        #
-#    Updated: 2018/04/19 23:34:03 by ythollet    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/04/20 01:06:13 by ythollet    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -17,7 +17,7 @@ CFLAGS = -c -Wall -Wextra -Werror
 NAME = libft.a
 
 DIR_CHR =	Char/
-DIR_PRTF =	Ft_printf/
+DIR_PRTF =	ft_printf/
 DIR_GNL =	GetNextLine/
 DIR_INC =	Includes/
 DIR_LST =	List/
@@ -48,7 +48,8 @@ STR =	ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c \
 		ft_strncpy.c ft_strsplit.c ft_strtrim.c ft_wstrlen.c ft_wstrdup.c
 
 PRTF =	ft_printf.c pf_parse.c pf_type.c pf_convert.c pf_print_field.c \
-		pf_struct.c pf_cvt_c.c pf_cvt_s.c pf_cvt_o.c pf_cvt_diu.c pf_cvt_xp.c
+		pf_struct.c pf_cvt_c.c pf_cvt_s.c pf_cvt_o.c pf_cvt_diu.c pf_cvt_xp.c \
+		pf_cvt_br.c
 
 MATH =	ft_atoi.c ft_itoa.c ft_lenint.c ft_lenint_base.c ft_sqrt.c ft_utoa.c \
 		ft_digitlen.c
@@ -56,8 +57,7 @@ MATH =	ft_atoi.c ft_itoa.c ft_lenint.c ft_lenint_base.c ft_sqrt.c ft_utoa.c \
 SRC = 	$(addprefix $(DIR_CHR), $(CHR)) $(addprefix $(DIR_GNL), $(GNL)) \
 		$(addprefix $(DIR_LST), $(LST)) $(addprefix $(DIR_STR), $(STR)) \
 		$(addprefix $(DIR_MEM), $(MEM)) $(addprefix $(DIR_PUT), $(PUT)) \
-		$(addprefix $(DIR_MATH), $(MATH)) 
-#		$(addprefix $(DIR_PRTF), $(PRTF))
+		$(addprefix $(DIR_MATH), $(MATH)) $(addprefix $(DIR_PRTF), $(PRTF))
 
 OBJ = 	$(SRC:.c=.o)
 
