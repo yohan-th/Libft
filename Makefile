@@ -6,7 +6,7 @@
 #    By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/03/14 01:36:40 by ythollet     #+#   ##    ##    #+#        #
-#    Updated: 2018/03/14 23:28:04 by ythollet    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/04/19 23:34:03 by ythollet    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -47,7 +47,7 @@ STR =	ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c \
 		ft_strclr.c ft_strdel.c ft_strlcat.c ft_strnbr.c ft_strcat_free.c \
 		ft_strncpy.c ft_strsplit.c ft_strtrim.c ft_wstrlen.c ft_wstrdup.c
 
-#PRTF =	ft_printf.c pf_parse.c pf_type.c pf_convert.c pf_print_field.c \
+PRTF =	ft_printf.c pf_parse.c pf_type.c pf_convert.c pf_print_field.c \
 		pf_struct.c pf_cvt_c.c pf_cvt_s.c pf_cvt_o.c pf_cvt_diu.c pf_cvt_xp.c
 
 MATH =	ft_atoi.c ft_itoa.c ft_lenint.c ft_lenint_base.c ft_sqrt.c ft_utoa.c \

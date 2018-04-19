@@ -6,7 +6,7 @@
 /*   By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/19 18:30:19 by ythollet     #+#   ##    ##    #+#       */
-/*   Updated: 2017/12/19 21:29:23 by ythollet    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/04/19 23:33:00 by ythollet    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,5 +32,6 @@
 # include "memory.h"
 # include "print.h"
 # include "string.h"
+# include "ft_printf.h"
 
 #endif
