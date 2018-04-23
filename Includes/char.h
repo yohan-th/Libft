@@ -6,7 +6,7 @@
 /*   By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/03/13 18:52:28 by ythollet     #+#   ##    ##    #+#       */
-/*   Updated: 2018/03/13 18:52:28 by ythollet    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/04/24 01:45:37 by ythollet    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -29,5 +29,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_nbrchar(char *str, char c);
 int		ft_size_wchar(wchar_t w);
+char	*ft_chardup(char c, int dup);
 
 #endif
