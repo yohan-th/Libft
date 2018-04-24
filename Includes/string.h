@@ -6,7 +6,7 @@
 /*   By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/03/13 19:41:55 by ythollet     #+#   ##    ##    #+#       */
-/*   Updated: 2018/04/24 02:36:36 by ythollet    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/04/24 02:40:13 by ythollet    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -52,7 +52,7 @@ wchar_t		*ft_wstrnew(size_t size);
 wchar_t		*ft_wstrsub(wchar_t const *s, unsigned int start, size_t len);
 wchar_t		*ft_wstrsub_free(wchar_t *s, unsigned int start, size_t len);
 char		*ft_strjoin_mltp(int n, ...);
-char		*ft_removepath(char *str);
+char		*ft_rmvpath(char *str);
 
 int			ft_strnbr(const char *str);
 
