@@ -17,7 +17,7 @@
 ** dupplique dans une chaine  de caractere fraiche le caracte {c} {dup} fois
 */
 
-char *ft_chardup(char c, int dup)
+char	*ft_chardup(char c, int dup)
 {
 	char *ret;
 
@@ -26,4 +26,3 @@ char *ft_chardup(char c, int dup)
 		ret[dup-- - 1] = c;
 	return (ret);
 }
-

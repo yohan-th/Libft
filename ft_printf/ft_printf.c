@@ -15,8 +15,8 @@
 
 /*
 ** pf_parse_correct, ft_undef_char, ft_undef_beha sont des fonctions
-** qui ont pour role de strictement respecter printf et ses cas non définis
-** Elles sont inutiles si on utilise correctement printf 
+** qui ont pour role de strictement respecter printf et ses cas non définis.
+** Elles sont inutiles si on utilise correctement printf
 */
 
 void	pf_parse_correct(t_pf_fields *fields, char type, const char *str)

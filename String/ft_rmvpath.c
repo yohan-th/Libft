@@ -18,15 +18,14 @@
 ** et le conserve. Ex ~/path/de/mon/fichier/ --> fichier/
 */
 
-char *ft_rmvpath(char *str)
+char	*ft_rmvpath(char *str)
 {
 	if (!ft_strchr(str, '/') && (ft_strchr(str, '/') + 1) == '\0')
 		return (str);
 	else
 	{
 		while (ft_strchr(str, '/') != 0 && ft_strlen(ft_strchr(str, '/')) != 1)
-				str = ft_strchr(str, '/') + 1;
-			return (str);
+			str = ft_strchr(str, '/') + 1;
+		return (str);
 	}
 }
-

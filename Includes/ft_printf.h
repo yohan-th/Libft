@@ -62,7 +62,8 @@ t_pf_prints		pf_convert(intmax_t *data, t_pf_fields *fields);
 int				pf_print_field(t_pf_prints *data_prt, t_pf_fields *fields);
 t_pf_prints		pf_print_reset(void);
 void			pf_parse_flags(t_pf_fields *fields, const char **format);
-void			pf_parse_correct(t_pf_fields *fields, char type, const char *str);
+void			pf_parse_correct(t_pf_fields *fields, char type,
+									const char *str);
 
 /*
 **┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
