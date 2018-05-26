@@ -34,9 +34,9 @@ int			get_next_line(const int fd, char **line)
 	static char	*str = NULL;
 	char		*tmp;
 	int			ret;
-	char		*free_str;
 
-	if (!(line) || BUFF_SIZE < 0 || fd < 0 || (!str && !(str = ft_strnew(0))))
+	if (!(line) || read(fd, str, 0) < 0 || fd < 0 ||
+			(!str && !(str = ft_strnew(0))))
 		return (-1);
 	while (!(tmp = ft_strchr(str, '\n')))
 	{
@@ -44,13 +44,13 @@ int			get_next_line(const int fd, char **line)
 		if (ret == 0 && !(ft_strlen(str)))
 			return (0);
 		if (ret == 0)
-			str = ft_strjoin(str, "\n");
+			str = ft_strcat_free(str, "\n");
 		if (ret < 0)
 			return (-1);
 	}
-	free_str = str;
 	*line = ft_strsub(str, 0, ft_strlen(str) - ft_strlen(tmp));
-	str = ft_strdup(++tmp);
-	free(free_str);
+	ft_strdel(&str);
+	if (tmp && (tmp + 1)[0] != '\0')
+		str = ft_strdup(tmp + 1);
 	return (1);
 }
