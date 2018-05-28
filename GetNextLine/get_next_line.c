@@ -18,7 +18,8 @@ static int	ft_read_file(char **str, int fd)
 	char	*buf;
 	int		ret;
 
-	buf = ft_strnew(BUFF_SIZE);
+	if (!buf = ft_strnew(BUFF_SIZE))
+		return (-1);
 	ret = read(fd, buf, BUFF_SIZE);
 	if (ret > 0)
 	{
@@ -34,6 +35,7 @@ int			get_next_line(const int fd, char **line)
 	static char	*str = NULL;
 	char		*tmp;
 	int			ret;
+	char		*free_str;
 
 	if (!(line) || read(fd, str, 0) < 0 || fd < 0 ||
 			(!str && !(str = ft_strnew(0))))
@@ -49,8 +51,9 @@ int			get_next_line(const int fd, char **line)
 			return (-1);
 	}
 	*line = ft_strsub(str, 0, ft_strlen(str) - ft_strlen(tmp));
-	ft_strdel(&str);
+	free_str = str;
 	if (tmp && (tmp + 1)[0] != '\0')
 		str = ft_strdup(tmp + 1);
+	ft_strdel(&free_str);
 	return (1);
 }
