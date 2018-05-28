@@ -18,7 +18,7 @@ static int	ft_read_file(char **str, int fd)
 	char	*buf;
 	int		ret;
 
-	if (!buf = ft_strnew(BUFF_SIZE))
+	if (!(buf = ft_strnew(BUFF_SIZE)))
 		return (-1);
 	ret = read(fd, buf, BUFF_SIZE);
 	if (ret > 0)
