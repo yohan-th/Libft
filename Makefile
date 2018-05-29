@@ -13,7 +13,7 @@
 
 .PHONY: all clean fclean re
 
-CFLAGS = -c -Wall -Wextra -Werror
+CFLAGS = -c -g -Wall -Wextra -Werror
 NAME = libft.a
 
 DIR_CHR =	Char/

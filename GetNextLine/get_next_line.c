@@ -18,8 +18,7 @@ static int	ft_read_file(char **str, int fd)
 	char	*buf;
 	int		ret;
 
-	if (!(buf = ft_strnew(BUFF_SIZE)))
-		return (-1);
+	buf = ft_strnew(BUFF_SIZE);
 	ret = read(fd, buf, BUFF_SIZE);
 	if (ret > 0)
 	{
@@ -37,8 +36,7 @@ int			get_next_line(const int fd, char **line)
 	int			ret;
 	char		*free_str;
 
-	if (!(line) || read(fd, str, 0) < 0 || fd < 0 ||
-			(!str && !(str = ft_strnew(0))))
+	if (!(line) || BUFF_SIZE < 0 || fd < 0 || (!str && !(str = ft_strnew(0))))
 		return (-1);
 	while (!(tmp = ft_strchr(str, '\n')))
 	{
@@ -46,14 +44,16 @@ int			get_next_line(const int fd, char **line)
 		if (ret == 0 && !(ft_strlen(str)))
 			return (0);
 		if (ret == 0)
-			str = ft_strcat_free(str, "\n");
+			str = ft_strjoin(str, "\n");
 		if (ret < 0)
 			return (-1);
 	}
-	*line = ft_strsub(str, 0, ft_strlen(str) - ft_strlen(tmp));
 	free_str = str;
-	if (tmp && (tmp + 1)[0] != '\0')
-		str = ft_strdup(tmp + 1);
+	*line = ft_strsub(str, 0, ft_strlen(str) - ft_strlen(tmp));
+	if (tmp && *(tmp + 1) != '\0')
+		str = ft_strdup(++tmp);
+	else
+		str = NULL;
 	ft_strdel(&free_str);
 	return (1);
 }
