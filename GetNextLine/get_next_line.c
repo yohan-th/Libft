@@ -13,6 +13,16 @@
 
 #include "../Includes/get_next_line.h"
 
+/*
+** clean_exit si read == -1 || buf de read == '\0'
+*/
+
+int 		ft_clean_exit(int err, char **str)
+{
+	ft_strdel(str);
+	return (err);
+}
+
 static int	ft_read_file(char **str, int fd)
 {
 	char	*buf;
@@ -41,12 +51,10 @@ int			get_next_line(const int fd, char **line)
 	while (!(tmp = ft_strchr(str, '\n')))
 	{
 		ret = ft_read_file(&str, fd);
-		if (ret == 0 && !(ft_strlen(str)))
-			return (0);
+		if ((ret == 0 && !(ft_strlen(str))) || ret == -1)
+			return (ft_clean_exit(ret, &str));
 		if (ret == 0)
 			str = ft_strjoin(str, "\n");
-		if (ret < 0)
-			return (-1);
 	}
 	free_str = str;
 	*line = ft_strsub(str, 0, ft_strlen(str) - ft_strlen(tmp));
@@ -55,5 +63,5 @@ int			get_next_line(const int fd, char **line)
 	else
 		str = NULL;
 	ft_strdel(&free_str);
-	return (1);
+	return(1);
 }
