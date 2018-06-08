@@ -17,7 +17,7 @@
 ** clean_exit si read == -1 || buf de read == '\0'
 */
 
-int 		ft_clean_exit(int err, char **str)
+int			ft_clean_exit(int err, char **str)
 {
 	ft_strdel(str);
 	return (err);
@@ -63,5 +63,5 @@ int			get_next_line(const int fd, char **line)
 	else
 		str = NULL;
 	ft_strdel(&free_str);
-	return(1);
+	return (1);
 }
