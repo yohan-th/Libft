@@ -6,7 +6,7 @@
 #    By: ythollet <ythollet@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/03/14 01:36:40 by ythollet     #+#   ##    ##    #+#        #
-#    Updated: 2018/04/24 02:37:00 by ythollet    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/06/18 21:15:34 by ythollet    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -41,7 +41,7 @@ MEM =	ft_bzero.c ft_memset.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c \
 PUT =	ft_putchar.c ft_putchar_fd.c ft_putnbr_signed.c ft_putnbr_unsigned.c \
 		ft_putstr.c ft_putstr_fd.c ft_putwchar.c ft_putwstr.c ft_putchar_dup.c
 
-STR =	ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c \
+STR =	ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c ft_strdelchar.c \
 		ft_strncat.c ft_strnequ.c ft_strstr.c ft_wstrncpy.c ft_rmvpath.c \
 		ft_strchr.c ft_strcpy.c ft_strjoin.c ft_wstrcpy.c ft_strjoin_mltp.c \
 		ft_strncmp.c ft_strnew.c ft_strrev.c ft_strsub.c ft_wstrsub.c \
