@@ -33,5 +33,6 @@
 # include "print.h"
 # include "string.h"
 # include "ft_printf.h"
+# include "array.h"
 
 #endif

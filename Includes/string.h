@@ -53,6 +53,7 @@ wchar_t		*ft_wstrsub(wchar_t const *s, unsigned int start, size_t len);
 wchar_t		*ft_wstrsub_free(wchar_t *s, unsigned int start, size_t len);
 char		*ft_strjoin_mltp(int n, ...);
 char		*ft_rmvpath(char *str);
+void		ft_strdelchar(char **str, char c);
 
 int			ft_strnbr(const char *str);
 

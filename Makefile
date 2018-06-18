@@ -25,6 +25,7 @@ DIR_MATH =	Maths/
 DIR_MEM =	Memory/
 DIR_PUT =	Print/
 DIR_STR =	String/
+DIR_ARRAY =	Array/
 
 CHR = 	ft_isascii.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_islower.c \
 		ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c \
@@ -54,10 +55,13 @@ PRTF =	ft_printf.c pf_parse.c pf_type.c pf_convert.c pf_print_field.c \
 MATH =	ft_atoi.c ft_itoa.c ft_lenint.c ft_lenint_base.c ft_sqrt.c ft_utoa.c \
 		ft_digitlen.c
 
+ARRAY = ft_arrdel.c ft_arrdup.c ft_arrlen.c
+
 SRC = 	$(addprefix $(DIR_CHR), $(CHR)) $(addprefix $(DIR_GNL), $(GNL)) \
 		$(addprefix $(DIR_LST), $(LST)) $(addprefix $(DIR_STR), $(STR)) \
 		$(addprefix $(DIR_MEM), $(MEM)) $(addprefix $(DIR_PUT), $(PUT)) \
-		$(addprefix $(DIR_MATH), $(MATH)) $(addprefix $(DIR_PRTF), $(PRTF))
+		$(addprefix $(DIR_MATH), $(MATH)) $(addprefix $(DIR_PRTF), $(PRTF)) \
+		$(addprefix $(DIR_ARRAY), $(ARRAY))
 
 OBJ = 	$(SRC:.c=.o)
 
